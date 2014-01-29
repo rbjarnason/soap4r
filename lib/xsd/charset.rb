@@ -10,7 +10,7 @@ module XSD
 
 
 module Charset
-  @internal_encoding = $KCODE
+  @internal_encoding = "UTF8"
 
   class XSDError < StandardError; end
   class CharsetError < XSDError; end
@@ -116,8 +116,7 @@ public
   end
 
   def Charset.charset_label(encoding)
-    CharsetMap.first
-    #CharsetMap[encoding.upcase]
+    CharsetMap[encoding.upcase]
   end
 
   def Charset.charset_str(label)
