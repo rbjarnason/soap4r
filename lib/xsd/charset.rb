@@ -116,7 +116,8 @@ public
   end
 
   def Charset.charset_label(encoding)
-    CharsetMap[encoding.upcase]
+    CharsetMap.first
+    #CharsetMap[encoding.upcase]
   end
 
   def Charset.charset_str(label)
